@@ -1,0 +1,41 @@
+{
+  "name": "Test App",
+  "version": "1.0.0",
+  "description": "Basic app",
+  "main": "content_script.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/app_url.git"
+  },
+  "scripts": {
+    "build:prod": "node_modules/.bin/webpack -p --env.NODE_ENV=production",
+    "build:dev": "node_modules/.bin/webpack",
+    "clean": "rm -rf dist *.zip",
+    "zip": "npm run build:prod && gulp zip",
+    "watch": "node_modules/.bin/webpack --watch"
+  },
+  "author": "Jimmity Billy Bob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/app_url/issues"
+  },
+  "homepage": "https://github.com/app_url#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "autoprefixer": "^9.4.10",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^2.1.0",
+    "gulp": "^4.0.0",
+    "gulp-zip": "^4.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {}
+}
